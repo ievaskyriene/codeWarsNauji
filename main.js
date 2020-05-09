@@ -36,8 +36,30 @@ function duplicateCount(text) {
     }
     return pasikartojantys.length;
   }
-  
   console.log(duplicateCount("Indivisibilities"))
+
+  console.log(".......")
+  /*Find the length of the longest substring in the given string s that is the same in reverse
+  As an example, if the input was “I like racecars that go fast”, the substring (racecar) length would be 7.
+  If the length of the input string is 0, the return value must be 0.*/
+  
+  function longestPalindrome(s){
+    let letters = s.split(" ")
+    let substringas = "";
+    console.log(letters)
+    for(let i = 0; i<letters.length; i++){
+      for(let j = 0; j<letters[i].length; j++){
+        substringas += letters[i].substring(j)
+        console.log(substringas)
+       
+      }
+    }
+
+    return
+  }
+  longestPalindrome("I like racecars that go fast")
+
+  console.log(".......")
 
 
 /*Given a list lst and a number N, create a new list that contains each number of lst at most N 
@@ -100,3 +122,46 @@ function deleteNth(arr, n){
       
   }
   diceCount();
+
+
+  //
+  /*canner sc = new Scanner (System.in);
+        System.out.println("0 - pabaiga");
+        System.out.println("1 - akmuo");
+        System.out.println("2 - popierius");
+        System.out.println("3 - zirkles");
+        let pasirinkimas = sc.nextInt();  
+        
+        int kp = ((int) Math.random()*3)+1;*/
+
+        let human = 1;
+        let cp = (Math.random()*3)+1;
+        let end = "0 - pabaiga";
+        let rock = "1 - akmuo";
+        let paper = "2 - popierius";
+        let scizzors = "3 - zirkles";
+        let game;
+
+      
+          if (human == parseInt(cp)){
+            console.log("zaidziam dar karta")
+          }
+          if (human == 1){
+              if(parseInt(cp) == 2){
+                console.log("laimejo kompas")
+              }
+              if(parseInt(cp) == 3){
+                console.log("laimejo zmogus")
+              }
+          }
+          if (human == 2){
+            if(parseInt(cp) == 1){
+              console.log("laimejo zmogus")
+            }
+            if(parseInt(cp) == 3){
+              console.log("laimejo kompas")
+            }
+        }
+
+        
+
